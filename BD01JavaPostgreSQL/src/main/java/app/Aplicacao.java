@@ -38,7 +38,7 @@ public class Aplicacao {
                     excluirUsuario();
                     break;
                 case 5:
-                    System.out.println("Saindo...");
+                    System.out.println("Saindo");
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
@@ -59,7 +59,7 @@ public class Aplicacao {
         System.out.println("\n==== Inserir usuário ====");
         System.out.print("Informe o código: ");
         int codigo = scanner.nextInt();
-        scanner.nextLine(); // Consume newline left-over
+        scanner.nextLine(); 
         System.out.print("Informe o login: ");
         String login = scanner.nextLine();
         System.out.print("Informe a senha: ");
@@ -79,7 +79,7 @@ public class Aplicacao {
         System.out.println("\n==== Atualizar usuário ====");
         System.out.print("Informe o código do usuário a ser atualizado: ");
         int codigo = scanner.nextInt();
-        scanner.nextLine(); // Consume newline left-over
+        scanner.nextLine(); 
         Usuario usuario = usuarioDAO.getByCodigo(codigo);
         if (usuario != null) {
             System.out.print("Informe o novo login: ");
